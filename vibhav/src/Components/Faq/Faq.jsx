@@ -23,8 +23,8 @@ function Faq() {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
   return (
-    <div className="w-[90%] sm:w-[50%]">
-      <div className="bg-black text-white p-6 m-9 h-fit rounded-lg shadow-md">
+    <div className="w-[90%] sm:w-[80%]">
+      <div className="text-white p-6 m-9 h-fit rounded-lg shadow-md">
         <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
         {faqs.map((faq, index) => (
           <div key={index} className="mb-6 border-b pb-4">
