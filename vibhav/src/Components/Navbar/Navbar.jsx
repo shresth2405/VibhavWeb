@@ -1,23 +1,19 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import { useRouter } from "next/navigation";
 
-function Navbar({ contactRef }) {
-  const router = useRouter();
+import { UserContext } from "@/Context/UserContext/UserContext";
 
-  const scrollToSection = () => {
-    if (contactRef && contactRef.current) {
-      contactRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+function Navbar() {
+  const { scrollToContact } = useContext(UserContext);
+  const router = useRouter();
 
   const handleContactClick = () => {
     if (window.location.pathname === "/") {
-      scrollToSection();
+      scrollToContact();
     } else {
-      router.push("/").then(() => {
-        setTimeout(() => scrollToSection(), 100);
-      });
+      router.push("/");
+      setTimeout(() => scrollToContact(), 100);
     }
   };
 
