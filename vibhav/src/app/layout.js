@@ -29,9 +29,10 @@ export default function RootLayout({ children }) {
         >
           <div className=" background "></div>
           <Navbar />
+          <BackToTop />
 
           {children}
-          <BackToTop />
+
           <Footer />
         </body>
       </html>
