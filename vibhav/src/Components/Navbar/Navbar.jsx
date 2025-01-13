@@ -4,6 +4,14 @@ import { usePathname, useRouter } from "next/navigation";
 
 import { UserContext } from "@/Context/UserContext/UserContext";
 import Link from "next/link";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/Components/ui/dropdown-menu";
 
 function Navbar() {
   const { scrollToContact } = useContext(UserContext);
@@ -52,7 +60,45 @@ function Navbar() {
                 </Link>
               </li>
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
-                <Link
+                <DropdownMenu>
+                  <DropdownMenuTrigger>Projects</DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem>
+                      <button onClick={() => router.push("/Projects/aiml")}>
+                        AI/ML
+                      </button>
+                      {/* <Link href="/Projects">AI/ML</Link> */}
+                    </DropdownMenuItem>
+                    {/* <DropdownMenuSeparator /> */}
+                    <DropdownMenuItem>
+                      <button onClick={() => router.push("/Projects/arvr")}>
+                        AR/VR
+                      </button>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <button onClick={() => router.push("/Projects/iot")}>
+                        IOT
+                      </button>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <button onClick={() => router.push("/Projects/dsp")}>
+                        DSP
+                      </button>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <button onClick={() => router.push("/Projects/embedded")}>
+                        EMBEDDED SYSTEMS
+                      </button>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <button onClick={() => router.push("/Projects/quantumC")}>
+                        QUANTUM COMPUTING
+                      </button>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+
+                {/* <Link
                   href="/Projects"
                   className={`${
                     pathname === "/Projects"
@@ -61,10 +107,27 @@ function Navbar() {
                   } hover:text-white  `}
                 >
                   Projects
-                </Link>
+                </Link> */}
               </li>
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
-                <Link
+                <DropdownMenu>
+                  <DropdownMenuTrigger>Team</DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem>
+                      <button onClick={() => router.push("/Team/CurrentTeam")}>
+                        Current
+                      </button>
+                      {/* <Link href="/Projects">AI/ML</Link> */}
+                    </DropdownMenuItem>
+                    {/* <DropdownMenuSeparator /> */}
+                    <DropdownMenuItem>
+                      <button onClick={() => router.push("/Team/Alumni")}>
+                        Alumni
+                      </button>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+                {/* <Link
                   href="/Team"
                   className={`${
                     pathname === "/Team"
@@ -73,10 +136,27 @@ function Navbar() {
                   } hover:text-white `}
                 >
                   Team
-                </Link>
+                </Link> */}
               </li>
               <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
-                <Link
+                <DropdownMenu>
+                  <DropdownMenuTrigger>Work</DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem>
+                      <button onClick={() => router.push("/Work/CurrentYear")}>
+                        Current Year
+                      </button>
+                      {/* <Link href="/Projects">AI/ML</Link> */}
+                    </DropdownMenuItem>
+                    {/* <DropdownMenuSeparator /> */}
+                    <DropdownMenuItem>
+                      <button onClick={() => router.push("/Work/PreviousYear")}>
+                        Previous Year
+                      </button>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+                {/* <Link
                   href="/Work"
                   className={`${
                     pathname === "/Work"
@@ -85,7 +165,7 @@ function Navbar() {
                   } hover:text-white  `}
                 >
                   Work
-                </Link>
+                </Link> */}
               </li>
             </ul>
           </li>
@@ -106,12 +186,13 @@ function Navbar() {
             />
           </li>
         </ul>
+
         <div
-          className={`sm:hidden transition-all duration-300 ease-in-out mt-2  bg-black w-[100%] fixed  overflow-hidden ${
-            showNavbar ? "max-h-screen" : "max-h-0"
+          className={`sm:hidden transition-all duration-1000 delay-1000 ease-in-out fixed top-14 bg-black w-[100%]   overflow-hidden ${
+            showNavbar ? "h-screen" : "max-h-0"
           } `}
         >
-          <ul className="flex flex-col items-center justify-evenly mx-auto z-20">
+          <ul className="flex flex-col items-center justify-evenly  mx-auto z-20">
             <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
               <button
                 onClick={() => {
