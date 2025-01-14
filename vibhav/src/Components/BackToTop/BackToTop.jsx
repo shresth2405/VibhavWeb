@@ -31,7 +31,7 @@ function BackToTop() {
   }, []);
   return (
     <div className="w-full ">
-      <div className="w-full fixed flex justify-center z-50 top-24">
+      <div className="w-full fixed flex justify-center z-20 top-24">
         {isVisible && (
           <button
             onClick={scrollToTop}
