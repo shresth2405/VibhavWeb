@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function page() {
-  return (
-    <div>
-      DSP
-    </div>
-  )
+  return <div>DSP</div>;
 }
 
-export default page
+export default page;

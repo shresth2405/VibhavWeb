@@ -9,6 +9,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  overflow-y: scroll;
+  scrollbar-width:thin;
+
 }
 .background{
   position: fixed;

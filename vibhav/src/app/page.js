@@ -9,7 +9,7 @@ import Intro from "../Components/IntroSection/Intro";
 export default function Home() {
   const { contactRef } = useContext(UserContext);
   return (
-    <div className="overflow-x-hidden  flex flex-col items-center ">
+    <div className="overflow-x-hidden   flex flex-col items-center ">
       <Intro />
       <First />
       <Faq />

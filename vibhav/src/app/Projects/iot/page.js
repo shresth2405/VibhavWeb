@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function page() {
-  return (
-    <div>
-      IOT
-    </div>
-  )
+  return <div>IOT</div>;
 }
 
-export default page
+export default page;

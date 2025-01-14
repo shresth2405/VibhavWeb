@@ -25,15 +25,17 @@ export default function RootLayout({ children }) {
     <UserContextProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased `}
         >
           <div className=" background "></div>
           <Navbar />
-          <BackToTop />
+          <div className="">
+            <BackToTop />
 
-          {children}
+            {children}
 
-          <Footer />
+            <Footer />
+          </div>
         </body>
       </html>
     </UserContextProvider>

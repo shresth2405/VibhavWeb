@@ -41,7 +41,7 @@ function Navbar() {
   };
 
   return (
-    <div className="navbar sticky fixed top-0 z-10 ">
+    <div className="navbar fixed w-full top-0 z-30 inset-0">
       <div className="max-sm:hidden  py-1 bg-black px-2 w-[100%] ">
         <ul className="flex justify-between items-center ">
           <li>
@@ -63,37 +63,55 @@ function Navbar() {
                 <DropdownMenu>
                   <DropdownMenuTrigger>Projects</DropdownMenuTrigger>
                   <DropdownMenuContent>
-                    <DropdownMenuItem>
-                      <button onClick={() => router.push("/Projects/aiml")}>
+                    <DropdownMenuItem
+                      onClick={() => router.push("/Projects/aiml")}
+                    >
+                      AI/ML
+                      {/* <button onClick={() => router.push("/Projects/aiml")}>
                         AI/ML
-                      </button>
+                      </button> */}
                       {/* <Link href="/Projects">AI/ML</Link> */}
                     </DropdownMenuItem>
                     {/* <DropdownMenuSeparator /> */}
-                    <DropdownMenuItem>
-                      <button onClick={() => router.push("/Projects/arvr")}>
+                    <DropdownMenuItem
+                      onClick={() => router.push("/Projects/arvr")}
+                    >
+                      AR/VR
+                      {/* <button onClick={() => router.push("/Projects/arvr")}>
                         AR/VR
-                      </button>
+                      </button> */}
                     </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <button onClick={() => router.push("/Projects/iot")}>
+                    <DropdownMenuItem
+                      onClick={() => router.push("/Projects/iot")}
+                    >
+                      IOT
+                      {/* <button onClick={() => router.push("/Projects/iot")}>
                         IOT
-                      </button>
+                      </button> */}
                     </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <button onClick={() => router.push("/Projects/dsp")}>
+                    <DropdownMenuItem
+                      onClick={() => router.push("/Projects/dsp")}
+                    >
+                      DSP
+                      {/* <button onClick={() => router.push("/Projects/dsp")}>
                         DSP
-                      </button>
+                      </button> */}
                     </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <button onClick={() => router.push("/Projects/embedded")}>
+                    <DropdownMenuItem
+                      onClick={() => router.push("/Projects/embedded")}
+                    >
+                      EMBEDDED SYSTEMS
+                      {/* <button onClick={() => router.push("/Projects/embedded")}>
                         EMBEDDED SYSTEMS
-                      </button>
+                      </button> */}
                     </DropdownMenuItem>
-                    <DropdownMenuItem>
-                      <button onClick={() => router.push("/Projects/quantumC")}>
+                    <DropdownMenuItem
+                      onClick={() => router.push("/Projects/quantumC")}
+                    >
+                      QUANTUM COMPUTING
+                      {/* <button onClick={() => router.push("/Projects/quantumC")}>
                         QUANTUM COMPUTING
-                      </button>
+                      </button> */}
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -223,7 +241,7 @@ function Navbar() {
                 Team
               </button>
             </li>
-            <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
+            {/* <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
               <button
                 onClick={() => {
                   router.push("/Work");
@@ -232,7 +250,24 @@ function Navbar() {
               >
                 Work
               </button>
-            </li>
+            </li> */}
+            <DropdownMenu>
+              <DropdownMenuTrigger>Work</DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem>
+                  <button onClick={() => router.push("/Work/CurrentYear")}>
+                    Current Year
+                  </button>
+                  {/* <Link href="/Projects">AI/ML</Link> */}
+                </DropdownMenuItem>
+                {/* <DropdownMenuSeparator /> */}
+                <DropdownMenuItem>
+                  <button onClick={() => router.push("/Work/PreviousYear")}>
+                    Previous Year
+                  </button>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <li className="text-3xs border-solid border-4 border-black p-1 rounded w-20 text-white">
               <button
                 onClick={() => {
