@@ -9,6 +9,12 @@ export default {
   ],
   theme: {
   	extend: {
+<<<<<<< HEAD
+=======
+  		transitionDuration: {
+  			'10000': '10000ms'
+  		},
+>>>>>>> upstream/master
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
